@@ -46,7 +46,7 @@ export default function Prompt() {
     <p>{content}</p>
      <div className="btn_prompt">
      <input className="prompt" type="text" placeholder="enter content here" onChange={(e)=>setinput(e.target.value) }/>
-    <button className="btn" onClick={getdata}>send</button>
+    <button className="btn" onClick={getdata}>send now</button>
      </div>
     </>
   )
