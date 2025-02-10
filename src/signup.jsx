@@ -42,11 +42,17 @@ export  function Signup() {
     console.log(res);
     let datajson =  await res.json()
     
-    if(datajson.status == 201) {
+    if(datajson.status == 201 || formData.user == "seller") {
+      localStorage.setItem("email" , formData.email)
       alert('Form submitted successfully!');
       history.push('/dashboard')
       
-    }else{
+    }
+    else if(datajson.status == 201 || formData.user == "customer"){
+      history.push('/main')
+
+    }
+    else{
             alert('something went wrong');
 
     }
